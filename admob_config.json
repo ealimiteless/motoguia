@@ -1,0 +1,11 @@
+{
+  "admob_app_id": "ca-app-pub-4754459062262858~7574472956",
+  "is_ads_enabled": true,
+  "test_ad_units": {
+    "app_open_ad_id": "ca-app-pub-4754459062262858/6212057266",
+    "interstitial_ad_id": "ca-app-pub-4754459062262858/9171549096",
+    "native_ad_id": "ca-app-pub-4754459062262858/4841421842",
+    "banner_ad_id": "ca-app-pub-4754459062262858/6154503512",
+    "rewarded_ad_id": "ca-app-pub-4754459062262858/4565757500"
+  }
+}

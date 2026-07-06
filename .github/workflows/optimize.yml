@@ -1,0 +1,105 @@
+name: Auto Optimize Wallpaper, Music and Generate JSON
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'raw_images/**'
+      - 'raw_music/**'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install Dependencies
+      run: pip install Pillow
+
+    - name: Run Script Optimization
+      run: |
+        python -c "
+        import os, json, shutil
+        from PIL import Image
+        
+        repo_full = os.environ.get('GITHUB_REPOSITORY', 'ealimiteless/my-wallpaper-assets')
+        
+        # === 1. PROSES WALLPAPER ===
+        os.makedirs('images', exist_ok=True)
+        wp_list = []
+        if os.path.exists('raw_images'):
+            wp_id = 1
+            for f in sorted(os.listdir('raw_images')):
+                if f.lower().endswith(('.png', '.jpg', '.jpeg', '.webp')) and f != '.gitkeep':
+                    try:
+                        img = Image.open(f'raw_images/{f}')
+                        if img.mode in ('RGBA', 'P'): img = img.convert('RGB')
+                        w_pref = (1080 / float(img.size[0]))
+                        h_size = int((float(img.size[1]) * float(w_pref)))
+                        img = img.resize((1080, h_size), Image.Resampling.LANCZOS)
+                        name_only = os.path.splitext(f)[0]
+                        clean_name = name_only.replace('-', '_').replace(' ', '_')
+                        img.save(f'images/{clean_name}.webp', 'WEBP', quality=80)
+                        
+                        wp_list.append({
+                            'id': wp_id,
+                            'title': name_only.replace('-', ' ').replace('_', ' ').title(),
+                            'category': 'General',
+                            'url': f'https://raw.githubusercontent.com/{repo_full}/main/images/{clean_name}.webp'
+                        })
+                        wp_id += 1
+                    except Exception as e: print(f'Error gambar {f}: {e}')
+            with open('wallpapers.json', 'w', encoding='utf-8') as jf:
+                json.dump(wp_list, jf, indent=2, ensure_ascii=False)
+
+        # === 2. PROSES MUSIK (PENGGUNAAN SHUTIL.COPY) ===
+        os.makedirs('music', exist_ok=True)
+        music_list = []
+        if os.path.exists('raw_music'):
+            music_id = 1
+            for f in sorted(os.listdir('raw_music')):
+                if f.lower().endswith('.mp3') and f != '.gitkeep':
+                    try:
+                        name_only = os.path.splitext(f)[0]
+                        clean_name = name_only.replace('-', '_').replace(' ', '_')
+                        output_music_name = f'{clean_name}.mp3'
+                        
+                        # Menggunakan shutil.copy agar aman dan tidak merusak tree repository
+                        shutil.copy(f'raw_music/{f}', f'music/{output_music_name}')
+                        
+                        display_title = name_only.replace('-', ' ').replace('_', ' ').title()
+                        
+                        # Link cover default
+                        cover_url = f'https://raw.githubusercontent.com/{repo_full}/main/images/file_1675781871465.webp'
+                        
+                        music_list.append({
+                            'id': music_id,
+                            'title': display_title,
+                            'artist': 'Katseye & Toca Boca Artist',
+                            'audio_url': f'https://raw.githubusercontent.com/{repo_full}/main/music/{output_music_name}',
+                            'cover_url': cover_url
+                        })
+                        print(f'Sukses memproses musik: {output_music_name}')
+                        music_id += 1
+                    except Exception as e: print(f'Error musik {f}: {e}')
+            with open('music_album.json', 'w', encoding='utf-8') as jf:
+                json.dump(music_list, jf, indent=2, ensure_ascii=False)
+        "
+
+    - name: Commit and Push Changes Automatically
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action Bot"
+        git add images/ wallpapers.json music/ music_album.json
+        git commit -m "Otomatisasi update Wallpaper dan Musik via Copy Method" || exit 0
+        git push
