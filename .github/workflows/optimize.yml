@@ -32,7 +32,7 @@ jobs:
         import os, json, shutil
         from PIL import Image
         
-        repo_full = os.environ.get('GITHUB_REPOSITORY', 'ealimiteless/my-wallpaper-assets')
+        repo_full = os.environ.get('GITHUB_REPOSITORY', 'ealimiteless/motoguia')
         
         # === 1. PROSES WALLPAPER ===
         os.makedirs('images', exist_ok=True)
