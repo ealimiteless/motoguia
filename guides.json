@@ -4,69 +4,69 @@
     "title": "Step 1: Introduction to Moto Camera Tuner A16",
     "game_name": "Moto Camera Guide",
     "content": "Moto Camera Tuner A16 is a specialized background utility designed by Motorola to provide essential camera tuning updates. Its primary purpose is to significantly improve fundamental photographic elements on your device, including color accuracy, dynamic contrast, picture noise reduction, video noise suppression, and overall image sharpness. Unlike traditional apps, it works entirely behind the scenes.",
-    "image_url": "https://raw.githubusercontent.com/ealimiteless/motoguia@main/main/images/moto_step1_intro.webp"
+    "image_url": "https://cdn.jsdelivr.net/gh/ealimiteless/motoguia@main/main/images/moto_step1_intro.webp"
   },
   {
     "id": 2,
     "title": "Step 2: Understanding the App Architecture (No UI)",
     "game_name": "Moto Camera Guide",
     "content": "The most important concept to grasp about Moto Camera Tuner A16 is its architecture: it is not a standalone application and has absolutely no User Interface (UI). After installation, you will not find an app icon on your home screen or in your app drawer. There are no settings to configure or toggles to switch. It is designed to be a completely invisible, hands-off experience for the user.",
-    "image_url": "https://raw.githubusercontent.com/ealimiteless/motoguia@main/main/images/moto_step2_noui.webp"
+    "image_url": "https://cdn.jsdelivr.net/gh/ealimiteless/motoguia@main/main/images/moto_step2_noui.webp"
   },
   {
     "id": 3,
     "title": "Step 3: Why It Exists on the Play Store",
     "game_name": "Moto Camera Guide",
     "content": "Traditionally, hardware-level camera improvements required a massive, time-consuming Full OTA (Over-The-Air) system update. Moto Camera Tuner A16 is posted as a standalone app on the Google Play Store specifically so that users do not have to download a full phone system build. This modular approach allows Motorola to push critical camera enhancements quickly and efficiently.",
-    "image_url": "https://raw.githubusercontent.com/ealimiteless/motoguia@main/main/images/moto_step3_playstore.webp"
+    "image_url": "https://cdn.jsdelivr.net/gh/ealimiteless/motoguia@main/main/images/moto_step3_playstore.webp"
   },
   {
     "id": 4,
     "title": "Step 4: Preparing Your Device for the Update",
     "game_name": "Moto Camera Guide",
     "content": "Before updating or installing the tuner, ensure your Motorola device is connected to a stable Wi-Fi network to avoid cellular data charges. Also, verify that your device has at least 20% battery life remaining. While the update is small, ensuring a stable connection prevents corrupted downloads that could temporarily disrupt camera functions.",
-    "image_url": "https://raw.githubusercontent.com/ealimiteless/motoguia@main/main/images/moto_step4_prep.webp"
+    "image_url": "https://cdn.jsdelivr.net/gh/ealimiteless/motoguia@main/main/images/moto_step4_prep.webp"
   },
   {
     "id": 5,
     "title": "Step 5: Locating the Tuner in the Play Store",
     "game_name": "Moto Camera Guide",
     "content": "To find the update, open the Google Play Store on your device. Tap on your profile icon in the top right corner, select 'Manage apps & device,' and then tap on 'Updates available.' Look through the list for 'Moto Camera Tuner A16.' Alternatively, you can type the exact name into the Play Store search bar to locate its dedicated app page.",
-    "image_url": "https://raw.githubusercontent.com/ealimiteless/motoguia@main/main/images/moto_step5_locate.webp"
+    "image_url": "https://cdn.jsdelivr.net/gh/ealimiteless/motoguia@main/main/images/moto_step5_locate.webp"
   },
   {
     "id": 6,
     "title": "Step 6: Executing the Download and Installation",
     "game_name": "Moto Camera Guide",
     "content": "Once you have located Moto Camera Tuner A16 in the Play Store, simply tap the 'Update' or 'Install' button. Because it is exclusively a tuning file rather than a bloated application, the download should take only a few seconds on a standard broadband connection. The Android system will automatically install and integrate the hardware instructions.",
-    "image_url": "https://raw.githubusercontent.com/ealimiteless/motoguia@main/main/images/moto_step6_install.webp"
+    "image_url": "https://cdn.jsdelivr.net/gh/ealimiteless/motoguia@main/main/images/moto_step6_install.webp"
   },
   {
     "id": 7,
     "title": "Step 7: Universal Application Across All Apps",
     "game_name": "Moto Camera Guide",
     "content": "Because Moto Camera Tuner A16 applies its improvements directly to the camera hardware rather than operating as a software filter, the benefits are universal. This means that any app on your phone that requests access to the camera—whether it is the native Moto Camera app, Instagram, Snapchat, Zoom, or a barcode scanner—will instantly benefit from the improved color, contrast, and sharpness.",
-    "image_url": "https://raw.githubusercontent.com/ealimiteless/motoguia@main/main/images/moto_step7_universal.webp"
+    "image_url": "https://cdn.jsdelivr.net/gh/ealimiteless/motoguia@main/main/images/moto_step7_universal.webp"
   },
   {
     "id": 8,
     "title": "Step 8: Testing the Camera Improvements",
     "game_name": "Moto Camera Guide",
     "content": "To verify the enhancements, open your favorite camera or social media app. Try taking photos in challenging environments, such as low light or high-contrast outdoor settings. You should notice a reduction in grainy visual artifacts (picture and video noise), richer color reproduction, and sharper edges on your subjects compared to the camera's previous performance.",
-    "image_url": "https://raw.githubusercontent.com/ealimiteless/motoguia@main/main/images/moto_step8_test.webp"
+    "image_url": "https://cdn.jsdelivr.net/gh/ealimiteless/motoguia@main/main/images/moto_step8_test.webp"
   },
   {
     "id": 9,
     "title": "Step 9: Troubleshooting the Tuner",
     "game_name": "Moto Camera Guide",
     "content": "If your camera begins behaving erratically or crashing after the update, you can easily troubleshoot it. Go to your phone's main Settings menu, navigate to 'Apps' or 'See all apps,' and find 'Moto Camera Tuner.' Tap on it, select 'Storage & cache,' and clear the cache. If issues persist, you can tap the three dots in the top right corner to 'Uninstall updates' and revert to the factory tuning.",
-    "image_url": "https://raw.githubusercontent.com/ealimiteless/motoguia@main/main/images/moto_step9_troubleshoot.webp"
+    "image_url": "https://cdn.jsdelivr.net/gh/ealimiteless/motoguia@main/main/images/moto_step9_troubleshoot.webp"
   },
   {
     "id": 10,
     "title": "Step 10: Enabling Seamless Future Updates",
     "game_name": "Moto Camera Guide",
     "content": "To ensure you continually receive the best possible camera performance without manual effort, it is highly recommended to enable automatic updates. Navigate back to the Moto Camera Tuner A16 page in the Google Play Store, tap the three vertical dots in the top right corner, and check the box next to 'Enable auto-update.' This guarantees your camera hardware will always run the latest optimizations.",
-    "image_url": "https://raw.githubusercontent.com/ealimiteless/motoguia@main/main/images/moto_step10_autoupdate.webp"
+    "image_url": "https://cdn.jsdelivr.net/gh/ealimiteless/motoguia@main/main/images/moto_step10_autoupdate.webp"
   }
 ]
